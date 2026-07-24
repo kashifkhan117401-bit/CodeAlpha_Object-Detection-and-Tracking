@@ -1,0 +1,24 @@
+# ── Core Detection & Tracking ─────────────────────────────────────────────────
+ultralytics>=8.1.0          # YOLOv8 object detection (auto-downloads weights)
+opencv-python>=4.8.0        # Video I/O, frame display, drawing utilities
+numpy>=1.24.0               # Numerical arrays & linear algebra
+scipy>=1.10.0               # Hungarian algorithm (linear_sum_assignment)
+filterpy>=1.4.5             # Kalman Filter implementation used by SORT
+
+# ── Deep-Learning Backend ─────────────────────────────────────────────────────
+torch>=2.0.0                # PyTorch (CPU); for GPU see note below
+torchvision>=0.15.0         # Image transforms & model zoo helpers
+# GPU install: pip install torch torchvision --index-url https://download.pytorch.org/whl/cu118
+
+# ── Utilities ─────────────────────────────────────────────────────────────────
+Pillow>=9.5.0               # Image loading/saving (ultralytics dependency)
+PyYAML>=6.0                 # Config file parsing (ultralytics dependency)
+tqdm>=4.65.0                # Progress bars during model download / inference
+requests>=2.31.0            # HTTP requests for weight auto-download
+psutil>=5.9.0               # System resource monitoring (CPU/RAM usage)
+py-cpuinfo>=9.0.0           # CPU information (ultralytics benchmarks)
+
+# ── Visualisation & Export (optional but recommended) ─────────────────────────
+matplotlib>=3.7.0           # Plotting detection / tracking results offline
+seaborn>=0.12.0             # Statistical visualisations for evaluation metrics
+pandas>=2.0.0               # Data manipulation for results logging / CSV export
